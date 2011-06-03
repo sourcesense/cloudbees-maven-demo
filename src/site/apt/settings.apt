@@ -43,6 +43,15 @@ Maven Settings
             <username>[account_id]</username>
             <password>{s0m3We1RdcHa5s=}</password>
         </server>
+        <!--
+        Next server conf is just used to set 'github' user;
+        authentication is based on ssh public key
+        -->
+        <server>
+            <id>github</id>
+            <username>git</username>
+            <password></password>
+        </server>
     </servers>
   </settings>
 +--------------------------------------+
