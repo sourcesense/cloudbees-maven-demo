@@ -94,3 +94,21 @@ bees.secret=<your_secret_key>
 git checkout master || git checkout -b master
 git reset --hard origin/master
 +--------------------------------------+
+
+ Web Tests
+
+  * Type: maven2/3 project
+
+  * JDK: Sun JDK 1.6.0_20 (Linux i586)
+
+  * Source Code Management: Git (advised)
+
+  * Repository Location: ssh://git@git.cloudbees.com/[account_id]/[code_repository_name].git
+
+  * Build > Maven Version: 3.0.3
+
+  * Build > Goals: clean verify -Pwebtests
+
+How it looks like
+
+[jenkins-dashboard.png] Cloudbees Jenkins Dashboard

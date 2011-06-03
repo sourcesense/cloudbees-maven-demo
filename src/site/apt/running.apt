@@ -21,6 +21,12 @@
 ~~   limitations under the License.
 ~~
 
+Checkout Cloudbees Maven Demo
+
++--------------------------------------+
+git clone git@github.com:sourcesense/cloudbees-maven-demo.git
++--------------------------------------+
+
 From commandline
 
 +--------------------------------------+
@@ -30,19 +36,19 @@ export BEES_SECRET = <your_secret_key>
 
 Edit pom.xml
 
-+--------------------------------------+
-* <bees.appid>, defined as [account_id]/[application_id] (example: maoo/testme)
-* your <scm> data
-* your <distributionManagement> data
-+--------------------------------------+
+  * <<<<bees.appid>>>>, defined as [account_id]/[application_id] (example: maoo/testme)
+
+  * your <<<<scm>>>> data
+  
+  * your <<<<distributionManagement>>>> data
 
 Commit/push in your repo
 
 +--------------------------------------+
-* git add . && git commit -m 'comment' && git push
+git add pom.xml && git commit -m 'comment' && git push
 +--------------------------------------+
 
-Try to invoke Maven commands
+Run Maven commands
 
 +--------------------------------------+
 mvn bees:run - test http://localhost:8085

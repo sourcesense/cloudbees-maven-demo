@@ -23,7 +23,7 @@
 
 Maven Settings
 
-  Here follows a settings.xml example to allow artifacts and site deployment on Cloudbees Maven private repositories
+  Here follows a settings.xml example to enable artifacts and site deployment on Cloudbees Maven private repositories
 
 +--------------------------------------+
   </settings>
@@ -57,3 +57,13 @@ Maven Settings
 +--------------------------------------+
 
   It is strongly advised to {{{http://maven.apache.org/guides/mini/guide-encryption.html}encrypt your Maven passwords}}.
+
+Jenkins Maven Settings
+
+  <~/.m2/settings.xml> and <~/.m2/security-settings.xml> must be copied into the private Cloudbees WebDAV drive, in order
+  to respect the {{{jenkins-conf.html}build configurations}}
+
+  You can use any WebDAV client to access your {{{infra.html}private repo}}, but the content should look something like
+  this.
+
+[private-repo.png] Cloudbees Private Repo WebDAV access

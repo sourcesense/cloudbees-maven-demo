@@ -1,0 +1,69 @@
+                                    ------
+                                    CloudBees Infrastructure
+                                    ------
+                                    Sourcesense - CloudBees Maven Demo
+                                    ------
+                                     2011
+
+~~
+~~   Copyright 2011 Sourcesense
+~~
+~~   Licensed under the Apache License, Version 2.0 (the "License");
+~~   you may not use this file except in compliance with the License.
+~~   You may obtain a copy of the License at
+~~
+~~       http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~   Unless required by applicable law or agreed to in writing, software
+~~   distributed under the License is distributed on an "AS IS" BASIS,
+~~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~   See the License for the specific language governing permissions and
+~~   limitations under the License.
+~~
+
+Cloudbees Concepts
+
+  * Account ID - maoo
+
+  * Application ID - testme
+
+  * Code Repository Name - cb_test
+
+  * Secret Key - SOMETHINGLONG/LIKE/THIS\=
+
+  * API Key - S0M1NGL1K3TH18
+
+Cloudbees Infrastructure
+
+  All following URLs are authenticated and can only be accessed by Cloudbees users which are part of the project's team.
+
+  * Jenkins instance; you can control and schedule Maven builds (see {{{jenkins-conf.html}Jenkins configuration }} for
+  more details)
+  {{{https://maoo.ci.cloudbees.com}https://<[account_id]>.ci.cloudbees.com}}
+  
+  * Maven Releases Repo; WebDAV drive which (optionally) contains all build artifacts which are released;
+  no snapshots can be deployed on this repo
+  {{{https://repository-maoo.forge.cloudbees.com/release}https://repository-<[account_id]>.forge.cloudbees.com/release}}
+
+  * Maven Snapshots Repo; WebDAV drive which (optionally) contains all build artifacts which are continuously deployed (*-SNAPSHOT)
+  {{{https://repository-maoo.forge.cloudbees.com/snapshot}https://repository-<[account_id]>.forge.cloudbees.com/snapshot}}
+
+  * Maven Private Repo; WebDAV drive which (optionally) contains the Maven-generated site and Jenkins configurations,
+  such as Maven settings.xml
+  {{{https://repository-maoo.forge.cloudbees.com/private}https://repository-<[account_id]>.forge.cloudbees.com/snapshot}}
+
+  * Git/Svn Code Repositories
+  {{{https://maoo.forge.cloudbees.com/projects/testme/show}https://<[account_id]>.forge.cloudbees.com/projects/<[code_repository_name]>/show}}
+
+  * Staging; it hosts the web applcation deployed via Cloudbees client API
+  {{{http://testme.maoo.cloudbees.net}http://<application_id>.<account_id>.cloudbees.net}}
+
+dev@cloud
+
+[infra-1.png] Cloudbees Infrastructure Dashboard 1
+
+[infra-2.png] Cloudbees Infrastructure Dashboard 2
+
+run@cloud
+
+[infra-3.png] Cloudbees Infrastructure Dashboard 3

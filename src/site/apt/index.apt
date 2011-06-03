@@ -29,7 +29,7 @@ Welcome to Cloudbees Maven Demo!
   no Cloudbees SDK is needed, no Ant scripts.
 
   This effort is targeted to people who want to start playing with <Cloudbees> using <Apache Maven>.
-  Please also check the {{{https://cloudbees.zendesk.com/entries/421064-maven-guide}official Cloudbees Maven guid page}}
+  Please also check the {{{https://cloudbees.zendesk.com/entries/421064-maven-guide}official Cloudbees Maven guide}}
 
 Changes
 

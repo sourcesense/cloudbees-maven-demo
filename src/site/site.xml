@@ -27,16 +27,19 @@
     <body>
         <menu name="${project.name}">
             <item name="Home" href="index.html" />
+            <item name="Cloudbees Infrastructure" href="infra.html" />
+            <item name="Maven Settings" href="settings.html" />
             <item name="Running" href="running.html" />
             <item name="Jenkins Configuration" href="jenkins-conf.html" />
-            <item name="Maven Settings" href="settings.html" />
         </menu>
 
         <menu ref="reports" />
 
         <menu name="External Links">
+            <item name="Fork us on GitHub!" href="http://github.com/sourcesense/cloudbees-maven-demo" />
             <item name="Apache Maven" href="http://maven.apache.org/" />
             <item name="CloudBees" href="https://www.cloudbees.com" />
+            <item name="Sourcesense" href="http://www.sourcesense.com" />
         </menu>
     </body>
 
