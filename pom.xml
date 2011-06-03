@@ -78,7 +78,7 @@
       <!--<id>cloudbees-my-private</id>-->
       <!--<url>dav:https://repository-maoo.forge.cloudbees.com/private/sites/${project.build.finalName}</url>-->
       <id>github</id>
-      <url>gitsite:git@github.com/sourcesense/${project.artifactId}.git</url>
+      <url>gitsite:git@github.com/sourcesense/cloudbees-maven-demo.git</url>
       <!--git@github.com:sourcesense/cloudbees-maven-demo.git-->
       <!--ssh://github.com/sourcesense/cloudbees-maven-demo.git-->
     </site>
