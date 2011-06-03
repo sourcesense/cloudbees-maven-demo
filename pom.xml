@@ -60,7 +60,6 @@
 
     <connection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</developerConnection>
-
   </scm>
 
   <distributionManagement>
@@ -75,10 +74,13 @@
       <url>dav:https://repository-maoo.forge.cloudbees.com/snapshot</url>
     </snapshotRepository>
     <site>
-      <id>cloudbees-my-private</id>
       <!-- Use these settings if your Site repo is hosted by Cloudbees -->
+      <!--<id>cloudbees-my-private</id>-->
       <!--<url>dav:https://repository-maoo.forge.cloudbees.com/private/sites/${project.build.finalName}</url>-->
-      <url>gitsite:git@github.com/sourcesense/${project.build.finalName}.git</url>
+      <id>github</id>
+      <url>gitsite:git@github.com/sourcesense/${project.artifactId}.git</url>
+      <!--git@github.com:sourcesense/cloudbees-maven-demo.git-->
+      <!--ssh://github.com/sourcesense/cloudbees-maven-demo.git-->
     </site>
   </distributionManagement>
 
@@ -116,7 +118,23 @@
         <artifactId>wagon-webdav</artifactId>
         <version>${wagon.webdav.version}</version>
       </extension>
+      <extension>
+          <groupId>org.kathrynhuxtable.maven.wagon</groupId>
+          <artifactId>wagon-gitsite</artifactId>
+          <version>0.2</version>
+      </extension>
+      <!--<extension>-->
+          <!--<groupId>org.apache.maven.scm</groupId>-->
+          <!--<artifactId>maven-scm-provider-gitexe</artifactId>-->
+          <!--<version>1.3</version>-->
+      <!--</extension>-->
+      <!--<extension>-->
+          <!--<groupId>org.apache.maven.scm</groupId>-->
+          <!--<artifactId>maven-scm-manager-plexus</artifactId>-->
+          <!--<version>1.3</version>-->
+      <!--</extension>-->
     </extensions>
+
 
     <plugins>
       <plugin>
