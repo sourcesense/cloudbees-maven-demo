@@ -16,6 +16,7 @@
 
     <!-- Overridden by jenkins-release profile -->
     <release.arguments />
+    <release.goals>clean bees:deploy site:site site:deploy deploy</release.goals>
 
     <!-- Application properties -->
     <application.version>${project.version}</application.version>
@@ -53,11 +54,9 @@
 
   <scm>
     <url>http://testme.maoo.cloudbees.net/</url>
-<!-- Use these settings if your GIT repo is hosted by Cloudbees -->
-<!--
-    <connection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</connection>
-    <developerConnection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</developerConnection>
--->
+    <!-- Use these settings if your GIT repo is hosted by Cloudbees -->
+    <!-- <connection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</connection> -->
+    <!-- <developerConnection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</developerConnection> -->
     <connection>scm:git:ssh://git@github.com:sourcesense/cloudbees-maven-demo.git</connection>
     <developerConnection>scm:git:ssh://git@github.com:sourcesense/cloudbees-maven-demo.git</developerConnection>
 
@@ -76,7 +75,9 @@
     </snapshotRepository>
     <site>
       <id>cloudbees-my-private</id>
-      <url>dav:https://repository-maoo.forge.cloudbees.com/private/sites/${project.build.finalName}</url>
+      <!-- Use these settings if your Site repo is hosted by Cloudbees -->
+      <!--<url>dav:https://repository-maoo.forge.cloudbees.com/private/sites/${project.build.finalName}</url>-->
+      <url>gitsite:git@github.com/sourcesense/${project.build.finalName}.git</url>
     </site>
   </distributionManagement>
 
