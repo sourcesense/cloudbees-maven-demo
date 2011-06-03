@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sourcesense.cloudbees</groupId>
   <artifactId>cloudbees-maven-demo</artifactId>
-  <version>0.1</version>
+  <version>0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Cloudbees Maven Demo</name>
   <description>A demo Maven project hosted by Cloudbees</description>
@@ -59,7 +59,7 @@
     <!-- <developerConnection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</developerConnection> -->
 
     <connection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:sourcesense/cloudbees-maven-demo.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</developerConnection>
 
   </scm>
 
