@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cloudbees Maven Demo - Maven Settings</title>
+    <title>Cloudbees Maven Demo - CloudBees Infrastructure</title>
     <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
     <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
     <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
@@ -85,12 +85,12 @@
           </li>
               
     <li class="none">
-                    <a href="infra.html">Cloudbees Infrastructure</a>
-          </li>
+              <strong>Cloudbees Infrastructure</strong>
+        </li>
               
     <li class="none">
-              <strong>Maven Settings</strong>
-        </li>
+                    <a href="settings.html">Maven Settings</a>
+          </li>
               
     <li class="none">
                     <a href="running.html">Running</a>
@@ -160,34 +160,7 @@
         </div>
         <div id="bodyColumn">
           <div id="contentBox">
-            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Maven Settings<a name="Maven_Settings"></a></h2><p>Here follows a settings.xml example to enable artifacts and site deployment on Cloudbees Maven private repositories</p><div class="source"><pre>  &lt;/settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-snapshots&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-releases&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-private&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;!--
-        Next server conf is just used to set 'github' user;
-        authentication is based on ssh public key
-        --&gt;
-        &lt;server&gt;
-            &lt;id&gt;github&lt;/id&gt;
-            &lt;username&gt;git&lt;/username&gt;
-            &lt;password&gt;&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-  &lt;/settings&gt;</pre></div><p>It is strongly advised to <a class="externalLink" href="http://maven.apache.org/guides/mini/guide-encryption.html">encrypt your Maven passwords</a>.</p></div><div class="section"><h2>Jenkins Maven Settings<a name="Jenkins_Maven_Settings"></a></h2><p><i>~/.m2/settings.xml</i> and <i>~/.m2/security-settings.xml</i> must be copied into the private Cloudbees WebDAV drive, in order to respect the <a href="./jenkins-conf.html">build configurations</a></p><p>You can use any WebDAV client to access your <a href="./infra.html">private repo</a>, but the content should look something like this.</p><img src="private-repo.png" alt="Cloudbees Private Repo WebDAV access" /></div>
+            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Cloudbees Concepts<a name="Cloudbees_Concepts"></a></h2><ul><li>Account ID - maoo</li><li>Application ID - testme</li><li>Code Repository Name - cb_test</li><li>Secret Key - SOMETHINGLONG/LIKE/THIS=</li><li>API Key - S0M1NGL1K3TH18</li></ul></div><div class="section"><h2>Cloudbees Infrastructure<a name="Cloudbees_Infrastructure"></a></h2><p>All following URLs are authenticated and can only be accessed by Cloudbees users which are part of the project's team.</p><ul><li>Jenkins instance; you can control and schedule Maven builds (see <a href="#jenkins-conf.html">Jenkins configuration </a> for more details) <a class="externalLink" href="https://maoo.ci.cloudbees.com">https://<i>[account_id]</i>.ci.cloudbees.com</a></li><li>Maven Releases Repo; WebDAV drive which (optionally) contains all build artifacts which are released; no snapshots can be deployed on this repo <a class="externalLink" href="https://repository-maoo.forge.cloudbees.com/release">https://repository-<i>[account_id]</i>.forge.cloudbees.com/release</a></li><li>Maven Snapshots Repo; WebDAV drive which (optionally) contains all build artifacts which are continuously deployed (*-SNAPSHOT) <a class="externalLink" href="https://repository-maoo.forge.cloudbees.com/snapshot">https://repository-<i>[account_id]</i>.forge.cloudbees.com/snapshot</a></li><li>Maven Private Repo; WebDAV drive which (optionally) contains the Maven-generated site and Jenkins configurations, such as Maven settings.xml. Site currently does not show since no mime-type text/html is applied to *.html; if would be very cool if Cloudbees could add this feature. <a class="externalLink" href="https://repository-maoo.forge.cloudbees.com/private">https://repository-<i>[account_id]</i>.forge.cloudbees.com/snapshot</a></li><li>Git/Svn Code Repositories; we're currently using the <a class="externalLink" href="http://github.com/sourcesense">}Sourcesense gitHub account} for hosting this project code (and this Maven site), in order to have it publicly available, but this sample has been widely tested also using Git on Cloudbees. {{{https://maoo.forge.cloudbees.com/projects/testme/show}https://<i>[account_id]</i>.forge.cloudbees.com/projects/<i>[code_repository_name]</i>/show</a></li><li>Staging; it hosts the web application deployed via Cloudbees client API <a class="externalLink" href="http://testme.maoo.cloudbees.net">http://<i>application_id</i>.<i>account_id</i>.cloudbees.net</a></li></ul></div><div class="section"><h2>dev@cloud<a name="devcloud"></a></h2><img src="infra-1.png" alt="Cloudbees Infrastructure Dashboard 1" /><img src="infra-2.png" alt="Cloudbees Infrastructure Dashboard 2" /></div><div class="section"><h2>run@cloud<a name="runcloud"></a></h2><img src="infra-3.png" alt="Cloudbees Infrastructure Dashboard 3" /></div>
           </div>
         </div>
         <div class="clear">

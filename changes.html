@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cloudbees Maven Demo - Maven Settings</title>
+    <title>Cloudbees Maven Demo - CloudBees Maven Demo</title>
     <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
     <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
     <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
@@ -89,8 +89,8 @@
           </li>
               
     <li class="none">
-              <strong>Maven Settings</strong>
-        </li>
+                    <a href="settings.html">Maven Settings</a>
+          </li>
               
     <li class="none">
                     <a href="running.html">Running</a>
@@ -160,34 +160,11 @@
         </div>
         <div id="bodyColumn">
           <div id="contentBox">
-            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Maven Settings<a name="Maven_Settings"></a></h2><p>Here follows a settings.xml example to enable artifacts and site deployment on Cloudbees Maven private repositories</p><div class="source"><pre>  &lt;/settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-snapshots&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-releases&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;server&gt;
-            &lt;id&gt;cloudbees-my-private&lt;/id&gt;
-            &lt;username&gt;[account_id]&lt;/username&gt;
-            &lt;password&gt;{s0m3We1RdcHa5s=}&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;!--
-        Next server conf is just used to set 'github' user;
-        authentication is based on ssh public key
-        --&gt;
-        &lt;server&gt;
-            &lt;id&gt;github&lt;/id&gt;
-            &lt;username&gt;git&lt;/username&gt;
-            &lt;password&gt;&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-  &lt;/settings&gt;</pre></div><p>It is strongly advised to <a class="externalLink" href="http://maven.apache.org/guides/mini/guide-encryption.html">encrypt your Maven passwords</a>.</p></div><div class="section"><h2>Jenkins Maven Settings<a name="Jenkins_Maven_Settings"></a></h2><p><i>~/.m2/settings.xml</i> and <i>~/.m2/security-settings.xml</i> must be copied into the private Cloudbees WebDAV drive, in order to respect the <a href="./jenkins-conf.html">build configurations</a></p><p>You can use any WebDAV client to access your <a href="./infra.html">private repo</a>, but the content should look something like this.</p><img src="private-repo.png" alt="Cloudbees Private Repo WebDAV access" /></div>
+            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Changes<a name="Changes"></a></h2><p>Here follow the changes I made to the standard Ant demo shipped with CloudBees:</p><div class="source"><pre>* removed build.xml
+* removed lib/
+* moved webapp to src/main/webapp
+* moved src in src/main/java
+* introduced pom.xml</pre></div></div>
           </div>
         </div>
         <div class="clear">
