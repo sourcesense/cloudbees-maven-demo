@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sourcesense.cloudbees</groupId>
   <artifactId>cloudbees-maven-demo</artifactId>
-  <version>0.1</version>
+  <version>0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Cloudbees Maven Demo</name>
   <description>A demo Maven project hosted by Cloudbees</description>
@@ -16,7 +16,7 @@
 
     <!-- Overridden by jenkins-release profile -->
     <release.arguments />
-    <release.goals>clean bees:deploy site:site site:deploy deploy</release.goals>
+    <release.goals>clean bees:deploy site:site deploy</release.goals>
 
     <!-- Application properties -->
     <application.version>${project.version}</application.version>
