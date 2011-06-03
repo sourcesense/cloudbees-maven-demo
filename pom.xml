@@ -57,7 +57,8 @@
     <!-- Use these settings if your GIT repo is hosted by Cloudbees -->
     <!-- <connection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</connection> -->
     <!-- <developerConnection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</developerConnection> -->
-    <connection>scm:git:ssh://git@github.com:sourcesense/cloudbees-maven-demo.git</connection>
+
+    <connection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</connection>
     <developerConnection>scm:git:ssh://git@github.com:sourcesense/cloudbees-maven-demo.git</developerConnection>
 
   </scm>
