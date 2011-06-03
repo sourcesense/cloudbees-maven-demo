@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sourcesense.cloudbees</groupId>
   <artifactId>cloudbees-maven-demo</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.3</version>
   <packaging>war</packaging>
   <name>Cloudbees Maven Demo</name>
   <description>A demo Maven project hosted by Cloudbees</description>
