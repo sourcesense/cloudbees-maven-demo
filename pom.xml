@@ -16,7 +16,7 @@
 
     <!-- Overridden by jenkins-release profile -->
     <release.arguments />
-    <release.goals>clean bees:deploy site:site deploy</release.goals>
+    <release.goals>clean bees:deploy site:site site:deploy deploy</release.goals>
 
     <!-- Application properties -->
     <application.version>${project.version}</application.version>
