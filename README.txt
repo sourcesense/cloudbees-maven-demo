@@ -7,4 +7,4 @@ no Cloudbees SDK is needed, no Ant scripts.
 I hope this effort will be useful for people who want to start playing with Cloudbees using Maven.
 Please also check the official Cloudbees Maven guid page - https://cloudbees.zendesk.com/entries/421064-maven-guide
 
-For more info, mvn site:run ;-)
+For more info, visit http://sourcesense.github.com/cloudbees-maven-demo
