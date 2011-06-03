@@ -51,7 +51,8 @@ git add pom.xml && git commit -m 'comment' && git push
 Run Maven commands
 
 +--------------------------------------+
-mvn bees:run - test http://localhost:8085
+mvn bees:run - check http://localhost:8085
+mvn site:run - check http://localhost:8080
 mvn deploy - check https://repository-<account_id>.forge.cloudbees.com/snapshot (use <account_id> as username)
 mvn bees:deploy - check http://<application_id>.<account_id>.cloudbees.net
 mvn release:prepare release:perform - check https://repository-<account_id>.forge.cloudbees.com/release
