@@ -49,13 +49,16 @@ Cloudbees Infrastructure
   {{{https://repository-maoo.forge.cloudbees.com/snapshot}https://repository-<[account_id]>.forge.cloudbees.com/snapshot}}
 
   * Maven Private Repo; WebDAV drive which (optionally) contains the Maven-generated site and Jenkins configurations,
-  such as Maven settings.xml
+  such as Maven settings.xml. Site currently does not show since no mime-type text/html is applied to *.html; if would
+  be very cool if Cloudbees could add this feature.
   {{{https://repository-maoo.forge.cloudbees.com/private}https://repository-<[account_id]>.forge.cloudbees.com/snapshot}}
 
-  * Git/Svn Code Repositories
+  * Git/Svn Code Repositories; we're currently using the {{{http://github.com/sourcesense}}Sourcesense gitHub account}
+   for hosting this project code (and this Maven site), in order to have it publicly available, but this sample has been
+   widely tested also using Git on Cloudbees.
   {{{https://maoo.forge.cloudbees.com/projects/testme/show}https://<[account_id]>.forge.cloudbees.com/projects/<[code_repository_name]>/show}}
 
-  * Staging; it hosts the web applcation deployed via Cloudbees client API
+  * Staging; it hosts the web application deployed via Cloudbees client API
   {{{http://testme.maoo.cloudbees.net}http://<application_id>.<account_id>.cloudbees.net}}
 
 dev@cloud

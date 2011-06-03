@@ -21,12 +21,14 @@
 ~~   limitations under the License.
 ~~
 
-Welcome to Cloudbees Maven Demo!
+Changes
 
-  <Cloudbees Maven Demo> is a porting of the default HelloWorld example - which is
-  shipped with <CloudBees> free PaaS offer - to <Apache Maven>.
-  It offers a collection of tips & tricks to achieve a simple J2EE demo hosted by CloubBees just using Apache Maven;
-  no Cloudbees SDK is needed, no Ant scripts.
+  Here follow the changes I made to the standard Ant demo shipped with CloudBees:
 
-  This effort is targeted to people who want to start playing with <Cloudbees> using <Apache Maven>.
-  Please also check the {{{https://cloudbees.zendesk.com/entries/421064-maven-guide}official Cloudbees Maven guide}}
++--------------------------------------+
+* removed build.xml
+* removed lib/
+* moved webapp to src/main/webapp
+* moved src in src/main/java
+* introduced pom.xml
++--------------------------------------+
