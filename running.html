@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cloudbees Maven Demo - CloudBees Maven Demo</title>
+    <title>Cloudbees Maven Demo - Running Cloudbees Maven Demo locally</title>
     <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
     <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
     <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
@@ -81,12 +81,12 @@
             <ul>
               
     <li class="none">
-              <strong>Home</strong>
-        </li>
+                    <a href="index.html">Home</a>
+          </li>
               
     <li class="none">
-                    <a href="running.html">Running</a>
-          </li>
+              <strong>Running</strong>
+        </li>
               
     <li class="none">
                     <a href="jenkins-conf.html">Jenkins Configuration</a>
@@ -100,7 +100,7 @@
             <ul>
               
                 
-                          
+                    
                   
                   
                   
@@ -113,59 +113,9 @@
                   
                   
               
-            <li class="expanded">
+        <li class="collapsed">
                     <a href="project-info.html">Project Information</a>
-                  <ul>
-                  
-    <li class="none">
-              <strong>About</strong>
-        </li>
-                  
-    <li class="none">
-                    <a href="integration.html">Continuous Integration</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="dependencies.html">Dependencies</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="distribution-management.html">Distribution Management</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="issue-tracking.html">Issue Tracking</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="mail-lists.html">Mailing Lists</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="plugin-management.html">Plugin Management</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="license.html">Project License</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="plugins.html">Project Plugins</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="project-summary.html">Project Summary</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="team-list.html">Project Team</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="source-repository.html">Source Repository</a>
-          </li>
-              </ul>
-        </li>
+                </li>
           </ul>
               <h5>External Links</h5>
             <ul>
@@ -198,11 +148,13 @@
         </div>
         <div id="bodyColumn">
           <div id="contentBox">
-            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Welcome to Cloudbees Maven Demo!<a name="Welcome_to_Cloudbees_Maven_Demo"></a></h2><p><i>Cloudbees Maven Demo</i> is a porting of the default HelloWorld example - which is shipped with <i>CloudBees</i> free PaaS offer - to <i>Apache Maven</i>. It offers a collection of tips &amp; tricks to achieve a simple J2EE demo hosted by CloubBees just using Apache Maven; no Cloudbees SDK is needed, no Ant scripts.</p><p>This effort is targeted to people who want to start playing with <i>Cloudbees</i> using <i>Apache Maven</i>. Please also check the <a class="externalLink" href="https://cloudbees.zendesk.com/entries/421064-maven-guide">official Cloudbees Maven guid page</a></p></div><div class="section"><h2>Changes<a name="Changes"></a></h2><p>Here follow the changes I made to the standard Ant demo shipped with CloudBees:</p><div class="source"><pre>* removed build.xml
-* removed lib/
-* moved webapp to src/main/webapp
-* moved src in src/main/java
-* introduced pom.xml</pre></div></div>
+            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>From commandline<a name="From_commandline"></a></h2><div class="source"><pre>export BEES_APIKEY= &lt;your_api_key&gt;
+export BEES_SECRET = &lt;your_secret_key&gt;</pre></div></div><div class="section"><h2>Edit pom.xml<a name="Edit_pom.xml"></a></h2><div class="source"><pre>* &lt;bees.appid&gt;, defined as [account_id]/[application_id] (example: maoo/testme)
+* your &lt;scm&gt; data
+* your &lt;distributionManagement&gt; data</pre></div></div><div class="section"><h2>Commit/push in your repo<a name="Commitpush_in_your_repo"></a></h2><div class="source"><pre>* git add . &amp;&amp; git commit -m 'comment' &amp;&amp; git push</pre></div></div><div class="section"><h2>Try to invoke Maven commands<a name="Try_to_invoke_Maven_commands"></a></h2><div class="source"><pre>mvn bees:run - test http://localhost:8085
+mvn deploy - check https://repository-&lt;account_id&gt;.forge.cloudbees.com/snapshot (use &lt;account_id&gt; as username)
+mvn bees:deploy - check http://&lt;application_id&gt;.&lt;account_id&gt;.cloudbees.net
+mvn release:prepare release:perform - check https://repository-&lt;account_id&gt;.forge.cloudbees.com/release</pre></div></div>
           </div>
         </div>
         <div class="clear">

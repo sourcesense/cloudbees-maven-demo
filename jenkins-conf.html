@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cloudbees Maven Demo - CloudBees Maven Demo</title>
+    <title>Cloudbees Maven Demo - How to configure Cloudbees Jenkins jobs</title>
     <link rel="stylesheet" href="./css/maven-theme.css" type="text/css" />
     <link rel="stylesheet" href="./css/maven-base.css" type="text/css"/>
     <link rel="stylesheet" href="./css/prettify.css" type="text/css"/>
@@ -81,16 +81,16 @@
             <ul>
               
     <li class="none">
-              <strong>Home</strong>
-        </li>
+                    <a href="index.html">Home</a>
+          </li>
               
     <li class="none">
                     <a href="running.html">Running</a>
           </li>
               
     <li class="none">
-                    <a href="jenkins-conf.html">Jenkins Configuration</a>
-          </li>
+              <strong>Jenkins Configuration</strong>
+        </li>
               
     <li class="none">
                     <a href="settings.html">Maven Settings</a>
@@ -100,7 +100,7 @@
             <ul>
               
                 
-                          
+                    
                   
                   
                   
@@ -113,59 +113,9 @@
                   
                   
               
-            <li class="expanded">
+        <li class="collapsed">
                     <a href="project-info.html">Project Information</a>
-                  <ul>
-                  
-    <li class="none">
-              <strong>About</strong>
-        </li>
-                  
-    <li class="none">
-                    <a href="integration.html">Continuous Integration</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="dependencies.html">Dependencies</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="distribution-management.html">Distribution Management</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="issue-tracking.html">Issue Tracking</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="mail-lists.html">Mailing Lists</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="plugin-management.html">Plugin Management</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="license.html">Project License</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="plugins.html">Project Plugins</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="project-summary.html">Project Summary</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="team-list.html">Project Team</a>
-          </li>
-                  
-    <li class="none">
-                    <a href="source-repository.html">Source Repository</a>
-          </li>
-              </ul>
-        </li>
+                </li>
           </ul>
               <h5>External Links</h5>
             <ul>
@@ -198,11 +148,9 @@
         </div>
         <div id="bodyColumn">
           <div id="contentBox">
-            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Welcome to Cloudbees Maven Demo!<a name="Welcome_to_Cloudbees_Maven_Demo"></a></h2><p><i>Cloudbees Maven Demo</i> is a porting of the default HelloWorld example - which is shipped with <i>CloudBees</i> free PaaS offer - to <i>Apache Maven</i>. It offers a collection of tips &amp; tricks to achieve a simple J2EE demo hosted by CloubBees just using Apache Maven; no Cloudbees SDK is needed, no Ant scripts.</p><p>This effort is targeted to people who want to start playing with <i>Cloudbees</i> using <i>Apache Maven</i>. Please also check the <a class="externalLink" href="https://cloudbees.zendesk.com/entries/421064-maven-guide">official Cloudbees Maven guid page</a></p></div><div class="section"><h2>Changes<a name="Changes"></a></h2><p>Here follow the changes I made to the standard Ant demo shipped with CloudBees:</p><div class="source"><pre>* removed build.xml
-* removed lib/
-* moved webapp to src/main/webapp
-* moved src in src/main/java
-* introduced pom.xml</pre></div></div>
+            <!--  --><!-- Copyright 2011 Sourcesense --><!--  --><!-- Licensed under the Apache License, Version 2.0 (the "License"); --><!-- you may not use this file except in compliance with the License. --><!-- You may obtain a copy of the License at --><!--  --><!-- http://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><!--  --><div class="section"><h2>Prerequisites<a name="Prerequisites"></a></h2><ul><li>Install <i>M2 Extra Steps Plugin</i> via <i>Manage Jenkins</i> &gt; <i>Manage Plugins</i></li></ul></div><div class="section"><h2>Jobs<a name="Jobs"></a></h2><p>Bees Snapshot Deploy</p><ul><li>Type: free-style software project</li><li>JDK: Sun JDK 1.6.0_20 (Linux i586)</li><li>Source Code Management: Git (advised)</li><li>Repository Location: ssh://git@git.cloudbees.com/[account_id]/[code_repository_name].git</li><li>Build &gt; Maven Version: 3.0.3</li><li>Build &gt; Goals: clean package bees:deploy</li><li>Build &gt; Properties:<div class="source"><pre>bees.apikey=&lt;your_api_key&gt;
+bees.secret=&lt;your_secret_key&gt;</pre></div></li></ul><p>Artifact and Site Snapshot Deploy</p><ul><li>Type: maven2/3 project</li><li>JDK: Sun JDK 1.6.0_20 (Linux i586)</li><li>Source Code Management: Git (advised)</li><li>Repository Location: ssh://git@git.cloudbees.com/[account_id]/[code_repository_name].git</li><li>Build &gt; Maven Version: 3.0.3</li><li>Build &gt; Goals: clean deploy site:site site:deploy -Pimproved-docs</li><li>Build &gt; MAVEN_OPTS: -Dsettings.security=/private/maoo/settings-security.xml</li><li>Build &gt; Advanced &gt; Alternate private settings : /private/[account_id]/settings.xml</li></ul><p>Full Release</p><ul><li>Type: maven2/3 project</li><li>JDK: Sun JDK 1.6.0_20 (Linux i586)</li><li>Source Code Management: Git (advised)</li><li>Repository Location: ssh://git@git.cloudbees.com/[account_id]/[code_repository_name].git</li><li>Git &gt; Advanced &gt; Clean after checkout: checked (Important! git command fails with no output during release:prepare)</li><li>Git &gt; Advanced &gt; Wipe out workspace : checked (Important! git command fails with no output during release:prepare)</li><li>Build &gt; Maven Version: 3.0.3</li><li>Build &gt; Goals: release:prepare release:perform -Pjenkins-release -Dbees.apikey=<i>your_api_key</i> -Dbees.secret=<i>your_secret_key</i></li><li>Build &gt; Advanced &gt; Alternate private settings : /private/[account_id]/settings.xml</li><li>Build Environment &gt; Configure M2 Extra Build Steps &gt; Add pre-build Step &gt; Execute Shell:<div class="source"><pre>git checkout master || git checkout -b master
+git reset --hard origin/master</pre></div></li></ul></div>
           </div>
         </div>
         <div class="clear">
