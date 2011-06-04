@@ -22,7 +22,7 @@
     <application.version>${project.version}</application.version>
 
     <!--
-    TODO: BAD! But's it's the only way to release with Maven and use
+    TODO: BAD! But it's the only way to release with Maven and use
     bees-maven-plugin 1.0-SNAPSHOT; remove it when Cloudbees will release
     a non SNAPSHOT version
     -->
