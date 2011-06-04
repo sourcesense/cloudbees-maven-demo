@@ -44,8 +44,8 @@ Maven Settings
             <password>{s0m3We1RdcHa5s=}</password>
         </server>
         <!--
-        Next server conf is just used to set 'github' user;
-        authentication is based on ssh public key
+        Next server conf is used to deploy this site on Sourcesense github;
+        above server conf is the one provided by Cloudbees.
         -->
         <server>
             <id>github</id>
