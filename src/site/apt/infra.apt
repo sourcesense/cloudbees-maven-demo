@@ -53,7 +53,7 @@ Cloudbees Infrastructure
   be very cool if Cloudbees could add this feature.
   {{{https://repository-maoo.forge.cloudbees.com/private}https://repository-<[account_id]>.forge.cloudbees.com/snapshot}}
 
-  * Git/Svn Code Repositories; we're currently using the {{{http://github.com/sourcesense}}Sourcesense gitHub account}
+  * Git/Svn Code Repositories; we're currently using the {{{http://github.com/sourcesense}Sourcesense gitHub account}}
    for hosting this project code (and this Maven site), in order to have it publicly available, but this sample has been
    widely tested also using Git on Cloudbees.
   {{{https://maoo.forge.cloudbees.com/projects/testme/show}https://<[account_id]>.forge.cloudbees.com/projects/<[code_repository_name]>/show}}
