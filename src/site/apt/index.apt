@@ -29,6 +29,6 @@ Welcome to Cloudbees Maven Demo!
   used is <Apache Maven>, no Cloudbees SDK, no Ant scripts.
 
   This effort is targeted to people who want to start playing with <Cloudbees> using <Apache Maven>; I hope
-  you'll find some interesting snippets for your builds.
+  you'll find some interesting snippets for your build.
 
   Check also the {{{https://cloudbees.zendesk.com/entries/421064-maven-guide}official Cloudbees Maven guide}}!
