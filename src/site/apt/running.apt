@@ -27,6 +27,8 @@ Checkout Cloudbees Maven Demo
 git clone git@github.com:sourcesense/cloudbees-maven-demo.git
 +--------------------------------------+
 
+  For more info, check the {{{http://www.github.com/sourcesense/cloudbees-maven-demo}github project page}}
+
 From commandline
 
 +--------------------------------------+
