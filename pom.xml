@@ -18,10 +18,14 @@
     <release.arguments />
     <release.goals>clean bees:deploy site:site site:deploy deploy</release.goals>
 
-    <!-- Application properties -->
+    <!-- Application properties (see example.HelloServlet) -->
     <application.version>${project.version}</application.version>
 
-    <!-- TODO: BAD! But's it's the only way to release with Maven and use the bees-maven-plugin -->
+    <!--
+    TODO: BAD! But's it's the only way to release with Maven and use
+    bees-maven-plugin 1.0-SNAPSHOT; remove it when Cloudbees will release
+    a non SNAPSHOT version
+    -->
     <release.allowTimestampedSnapshots>true</release.allowTimestampedSnapshots>
 
     <!-- Dependency versions -->
@@ -53,11 +57,10 @@
   </properties>
 
   <scm>
-    <url>http://testme.maoo.cloudbees.net/</url>
+    <url>http://sourcesense.github.com/cloudbees-maven-demo</url>
     <!-- Use these settings if your GIT repo is hosted by Cloudbees -->
     <!-- <connection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</connection> -->
     <!-- <developerConnection>scm:git:ssh://git@git.cloudbees.com/maoo/cb-test.git</developerConnection> -->
-
     <connection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/sourcesense/cloudbees-maven-demo.git</developerConnection>
   </scm>
@@ -349,21 +352,6 @@
               </execution>
             </executions>
           </plugin>
-          <!-- TODO : Cannot obtain passphrase in batch mode -->
-          <!--<plugin>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-gpg-plugin</artifactId>-->
-            <!--<version>${gpg.plugin.version}</version>-->
-            <!--<executions>-->
-              <!--<execution>-->
-                <!--<id>sign-artifacts</id>-->
-                <!--<phase>verify</phase>-->
-                <!--<goals>-->
-                  <!--<goal>sign</goal>-->
-                <!--</goals>-->
-              <!--</execution>-->
-            <!--</executions>-->
-          <!--</plugin>-->
         </plugins>
       </build>
     </profile>
