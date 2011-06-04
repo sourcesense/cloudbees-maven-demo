@@ -28,7 +28,7 @@ Welcome to Cloudbees Maven Demo!
   over releases and deployments; all needed infrastructure is hosted by <Cloudbees> and the only build technology
   used is <Apache Maven>, no Cloudbees SDK, no Ant scripts.
 
-  This effort is targeted to people who want to start playing with <Cloudbees> using <Apache Maven>; if you're
-  playing with <Cloudbees> and you like Maven, you might find some interesting snippets for your builds.
+  This effort is targeted to people who want to start playing with <Cloudbees> using <Apache Maven>; I hope
+  you'll find some interesting snippets for your builds.
 
   Check also the {{{https://cloudbees.zendesk.com/entries/421064-maven-guide}official Cloudbees Maven guide}}!
